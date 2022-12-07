@@ -3,8 +3,6 @@ import pygame
 # The class GameMenu was created to describe the structure of the game menu
 
 # Let's create a global variable for more convenient work with functions
-global menu
-menu = True
 
 # According to PEP8 standards, colors should be specified
 # at the very beginning of the file, and then work with them
@@ -50,10 +48,11 @@ def screen_menu(screen):
     message = menu_style.render("Выйти", True, yellow_red)
     screen.blit(message, [300, 355])
 
+
 # The main function of this file. To begin with,
 # we introduce three global variables through which it will be easier to work
 def menu_control(screen):
-    global menu
+    menu = True
     pygame.mouse.set_visible(True)
     while menu:
         # Menu drawing
